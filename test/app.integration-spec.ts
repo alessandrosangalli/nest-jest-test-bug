@@ -22,7 +22,7 @@ describe('Cats', () => {
     catsController = moduleFixture.get<CatsController>(CatsController);
     httpClient = await moduleFixture.resolve<HttpClient>(HttpClient);
     httpClientSpies = {
-      post: jest.spyOn(httpClient, 'post'),
+      post: jest.spyOn(HttpClient.prototype, 'post'),
     };
   });
 
